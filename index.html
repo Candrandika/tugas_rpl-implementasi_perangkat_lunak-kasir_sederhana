@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implementasi PL</title>
+  </head>
+  <body>
+    <div class="container my-3">
+      <div class="d-flex gap-3 flex-column">
+
+        <div class="card">
+          <div class="card-body">
+            <h1 class="text-center">Program Kasir</h1>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-10">
+                <input type="text" class="form-control" placeholder="Masukkan kode/nama produk" id="product-input">
+              </div>
+              <div class="col-md-2">
+                <button type="button" class="btn btn-primary w-100" id="search-product-btn">Cari</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Keranjang Pembelian</h5>
+          </div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Nama Produk</th>
+                  <th scope="col">Harga</th>
+                  <th scope="col">Jumlah</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody id="cart-table-body">
+                <tr>
+                  <td colspan="4" class="text-center text-muted">-- belum ada produk --</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
