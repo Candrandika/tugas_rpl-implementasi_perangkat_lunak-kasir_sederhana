@@ -3,6 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { ListProducts } from './classes/ListProduct';
 import { Product } from './classes/Product';
 import { Transaction } from './classes/Transaction';
+import { formatNum } from './helper/formatNumber';
 
 // buat daftar produk
 const katalog: ListProducts = new ListProducts();
@@ -30,18 +31,18 @@ function updateTableProduct() {
         rows += `
             <tr>
                 <td>${item.getProduct().getCode()} | ${item.getProduct().getName()}</td>
-                <td>${item.getProduct().getPrice()}</td>
-                <td>${item.getQty()}</td>
-                <td>${item.getSubTotal()}</td>
+                <td class="text-center">Rp ${formatNum(item.getProduct().getPrice())}</td>
+                <td class="text-center">${formatNum(item.getQty())}</td>
+                <td class="text-end">Rp ${formatNum(item.getSubTotal())}</td>
             </tr>
         `
     })
 
     if(rows === '') rows = '<tr><td colspan="4" class="text-center text-muted">-- belum ada produk --</td></tr>'
     else rows += `
-        <tr>
-            <td colspan="3" class="text-end">Total</td>
-            <td>${transaksi.getTotalPrice()}</td>
+        <tr class="table-dark align-middle">
+            <td colspan="3">Total</td>
+            <th class="text-end fw-bolder fs-5">Rp ${formatNum(transaksi.getTotalPrice())}</th>
         </tr>
     `
     table.innerHTML = rows
