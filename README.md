@@ -1,7 +1,7 @@
 # Cara Menjalankan Program
 1. Clone repository ini ke komputer lokal Anda dengan menjalankan perintah berikut di terminal:
    ```
-   git clone https://github.com/noctican/implementasi-pl.git
+   git clone https://github.com/Candrandika/tugas_rpl-implementasi_perangkat_lunak-kasir_sederhana.git
    ```
 2. Masuk ke direktori proyek
 3. Install dependencies dengan menjalankan perintah berikut:
